@@ -1,10 +1,10 @@
-class Macpulse < Formula
+class Macverdict < Formula
   include Language::Python::Virtualenv
 
   desc "Tells you why your Mac was slow this week and what to do about it"
-  homepage "https://github.com/anirudhjayaraman/macpulse"
-  url "https://github.com/anirudhjayaraman/macpulse/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "a2a15f76dda647c4d2f6f436154f2b2fe9332928c48e3bbc48d7dcbfec32f746"
+  homepage "https://github.com/anirudhjayaraman/macverdict"
+  url "https://github.com/anirudhjayaraman/macverdict/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "61915e3d74b0a1c8d6ca8b7dff6509d83a16da302d3ff0c595e3fbf4dfea34d5"
   license "MIT"
 
   depends_on :macos
@@ -22,16 +22,16 @@ class Macpulse < Formula
   def caveats
     <<~EOS
       Finish setting up (background recording and alerts) with:
-        macpulse setup
+        macverdict setup
 
-      Before `brew uninstall macpulse`, run:
-        macpulse uninstall
+      Before `brew uninstall macverdict`, run:
+        macverdict uninstall
     EOS
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/macpulse --version")
-    ENV["MACPULSE_HOME"] = testpath
-    system bin/"macpulse", "check", "--json", "--interval", "0.1"
+    assert_match version.to_s, shell_output("#{bin}/macverdict --version")
+    ENV["MACVERDICT_HOME"] = testpath
+    system bin/"macverdict", "check", "--json", "--interval", "0.1"
   end
 end
