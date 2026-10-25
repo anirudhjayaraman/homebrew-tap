@@ -3,8 +3,8 @@ class Macpulse < Formula
 
   desc "Tells you why your Mac was slow this week and what to do about it"
   homepage "https://github.com/anirudhjayaraman/macpulse"
-  url "https://github.com/anirudhjayaraman/macpulse/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "877f4e91c2a0b678589a7e0e680ec6fcfd0ad52535453e86e7e58a3da3158200"
+  url "https://github.com/anirudhjayaraman/macpulse/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "a2a15f76dda647c4d2f6f436154f2b2fe9332928c48e3bbc48d7dcbfec32f746"
   license "MIT"
 
   depends_on :macos
