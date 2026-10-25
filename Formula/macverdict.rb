@@ -3,8 +3,8 @@ class Macverdict < Formula
 
   desc "Tells you why your Mac was slow this week and what to do about it"
   homepage "https://github.com/anirudhjayaraman/macverdict"
-  url "https://github.com/anirudhjayaraman/macverdict/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "61915e3d74b0a1c8d6ca8b7dff6509d83a16da302d3ff0c595e3fbf4dfea34d5"
+  url "https://github.com/anirudhjayaraman/macverdict/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "fc452af19507fec2c1a36ca4f83f6fd3ab5dea99f6ff06cb31c9579669b2f72c"
   license "MIT"
 
   depends_on :macos
@@ -17,6 +17,7 @@ class Macverdict < Formula
 
   def install
     virtualenv_install_with_resources
+    zsh_completion.install "completions/_macverdict"
   end
 
   def caveats
